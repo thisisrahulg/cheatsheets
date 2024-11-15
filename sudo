@@ -1,0 +1,6 @@
+# sudo remove the faillock
+
+faillock --reset
+
+# for specific user,
+faillock --reset --user <username>
