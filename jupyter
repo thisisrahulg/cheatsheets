@@ -1,0 +1,28 @@
+# installation
+conda install jupyterlab -c conda-forge
+
+# convert notebook to script
+jupyter-nbconvert analyze-catalogue.ipynb --to script
+
+# To  instal kernel in jupyter notebook
+python -m ipykernel install --user --name other-env --display-name "Python (other-env)"
+
+jupyter --paths
+jupyter kernelspec list
+jupyter kernelspec uninstall unwanted-kernel
+ipython kernel install --user --name=<name>
+
+# dont open browser
+--no-browser
+
+# refresh the page if showing a blank page
+Ctrl + shift + r
+
+# specify ip to run on
+--ip=local-ip
+
+
+# Start on remote server and then setup an ssh tunnel from the local machine
+jupyter notebook --no-browser --port=8000
+ssh -L 8080:localhost:8000 <remote_user>@<remoteIP>
+http://localhost:8080/
